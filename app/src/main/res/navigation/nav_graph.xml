@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CitiesFragment">
+
+    <fragment
+        android:id="@+id/CitiesFragment"
+        android:name="com.juliablack.weathersimpleapp.cities.CitiesFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_cities">
+
+<!--        <argument-->
+<!--            android:name="query"-->
+<!--            app:argType="string"-->
+<!--            />-->
+
+        <action
+            android:id="@+id/action_CitiesFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.juliablack.weathersimpleapp.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_CitiesFragment"
+            app:destination="@id/CitiesFragment" />
+    </fragment>
+</navigation>
